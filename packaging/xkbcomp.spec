@@ -1,6 +1,6 @@
 Name:           xkbcomp
 Version:        1.2.4
-Release:        0
+Release:        1
 License:        MIT
 Summary:        Utility to compile XKB keyboard description
 Url:            http://xorg.freedesktop.org/
@@ -32,7 +32,7 @@ into one of several output formats.
 cp %{SOURCE1001} .
 
 %build
-%configure
+%configure --datadir=/etc
 make %{?_smp_mflags}
 
 %install
