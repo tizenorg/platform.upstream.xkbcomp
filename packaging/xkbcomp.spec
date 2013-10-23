@@ -32,7 +32,7 @@ into one of several output formats.
 cp %{SOURCE1001} .
 
 %build
-%configure --datadir=/etc
+%configure --datadir=/usr/share
 make %{?_smp_mflags}
 
 %install
