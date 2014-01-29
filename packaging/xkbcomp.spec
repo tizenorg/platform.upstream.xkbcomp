@@ -1,3 +1,5 @@
+%bcond_with x
+
 Name:           xkbcomp
 Version:        1.2.4
 Release:        1
@@ -13,6 +15,10 @@ BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xkbfile)
 BuildRequires:  pkgconfig(xorg-macros) >= 1.8
 BuildRequires:  pkgconfig(xproto) >= 7.0.17
+
+%if !%{with x}
+ExclusiveArch:
+%endif
 
 %description
 The xkbcomp keymap compiler converts a description of an XKB keymap
